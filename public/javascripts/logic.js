@@ -20,25 +20,25 @@ $(document).ready(function(){
     var time = 0;
     var pLength = p.length;
     for(var i=0; i<pLength; i++){
-      if(p.charCodeAt(i)>='A' && p.charCodeAt(i)<='Z'){
+      if(p.charAt(i)>='A' && p.charAt(i)<='Z'){
         time = time+26;
         break;
       }
     }
     for(var i=0; i<pLength; i++){
-      if(p.charCodeAt(i)>='a' && p.charCodeAt(i)<='z'){
+      if(p.charAt(i)>='a' && p.charAt(i)<='z'){
         time = time+26;
         break;
       }
     }
     for(var i=0; i<pLength; i++){
-      if(p.charCodeAt(i)>='0' && p.charCodeAt(i)<='9'){
+      if(p.charAt(i)>='0' && p.charAt(i)<='9'){
         time = time+10;
         break;
       }
     }
     for(var i=0; i<pLength; i++){
-      if((p.charCodeAt(i)>=' ' && p.charCodeAt(i)<='/') || (p.charCodeAt(i)>=':' && p.charCodeAt(i)<='@') || (p.charCodeAt(i)>='[' && p.charCodeAt(i)<='`') || (p.charCodeAt(i)>='{' && p.charCodeAt(i)<='~')){
+      if((p.charAt(i)>=' ' && p.charAt(i)<='/') || (p.charAt(i)>=':' && p.charAt(i)<='@') || (p.charAt(i)>='[' && p.charAt(i)<='`') || (p.charAt(i)>='{' && p.charAt(i)<='~')){
         time = time+33;
         break;
       }
