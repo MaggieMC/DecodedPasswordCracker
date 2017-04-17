@@ -19,24 +19,28 @@ $(document).ready(function(){
   function time(p){
     var time = 0;
     var pLength = p.length;
+    //If password contains capital letter
     for(var i=0; i<pLength; i++){
       if(p.charAt(i)>='A' && p.charAt(i)<='Z'){
         time = time+26;
         break;
       }
     }
+    //If password contains lowercase letter
     for(var i=0; i<pLength; i++){
       if(p.charAt(i)>='a' && p.charAt(i)<='z'){
         time = time+26;
         break;
       }
     }
+    //If password contains digit
     for(var i=0; i<pLength; i++){
       if(p.charAt(i)>='0' && p.charAt(i)<='9'){
         time = time+10;
         break;
       }
     }
+    //If password contains special character
     for(var i=0; i<pLength; i++){
       if((p.charAt(i)>=' ' && p.charAt(i)<='/') || (p.charAt(i)>=':' && p.charAt(i)<='@') || (p.charAt(i)>='[' && p.charAt(i)<='`') || (p.charAt(i)>='{' && p.charAt(i)<='~')){
         time = time+33;
